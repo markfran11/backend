@@ -7,11 +7,13 @@ const app = express();
 app.use('/book', bookRoute);
 app.use('/student', studentRoute);
 
-try{
+try {
     const port = 3000;
-    app.listen(port,() => {
-        console.log(listening to port ${port}....);
+
+    app.listen(port, () => {
+        console.log(`Listening to port ${port}....`);
     });
-}catch(e) {
+
+} catch(e) {
     console.log(e);
 }
