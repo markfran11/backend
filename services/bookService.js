@@ -1,24 +1,24 @@
-import * as bookModel from '../models/bookModel.js';
+import * as bookModel from "../models/bookModel.js";
 
-export const fetchAllBooks = async() =>{
-    const books = await bookModel.fetch();
-    return books;
-}
+export const fetchAllBooks = async () => {
+  const books = await bookModel.fetch();
+  return books;
+};
 
 //insert
-export const createBook = async(student) =>{
-    const bookId = await bookModel.insert(book);
-    return bookId;
-}
+export const createBook = async (book) => {
+  const bookId = await bookModel.insert(book);
+  return bookId;
+};
 
 //update
-export const updateBook = async(book) =>{
-    const updatedBook = await bookModel.update(book);
-    return updatedBook;
-}
+export const updateBook = async (book) => {
+  const updatedBook = await bookModel.update(book);
+  return updatedBook;
+};
 
 //delete
-export const deleteBook = async(id) =>{
-    const deletedBook = await bookModel.remove(id);
-    return deletedBook;
-}
+export const deleteBook = async (id) => {
+  const deletedBook = await bookModel.remove(id);
+  return deletedBook;
+};
